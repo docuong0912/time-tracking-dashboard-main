@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+  --work :hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise : hsl(145, 58%, 55%);
+  --social : hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  /* other */
+  --xanhvllun :hsl(226, 43%, 10%);
+  --xanhvl : hsl(235, 46%, 20%);
+  --xanhwe: hsl(235, 45%, 61%);
+  --xanhxanh: hsl(236, 100%, 87%);
+}
+*{
+  box-sizing: border-box;
+  font-family: 'Rubik',sans-serif;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--xanhvllun);
+}
+header{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: var(--xanhvl);
+  width: 90%;
+  margin-top: 50px;
+}
+.upper-sm-container{
+  background-color: hsl(261, 100%, 49%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px;
+}
+.upper-sm-container p:last-of-type{
+  font-weight: 300;
+}
+.category{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color:var(--xanhwe)
+}
+.category p:hover {
+  cursor: pointer;
+  color: lightgrey;
+}
+.active{
+  color:white;
+}
+header img{
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.upper-sm-container p:first-of-type{
+  color: lightgrey;
+}
+.upper-sm-container p:last-of-type{
+  font-size: 25px;
+  text-transform: none;
+  color: white;
+}
+.upper-sm-container p{
+  margin: 0;
+}
+.task-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+}
+.task{
+  position: relative;
+  width: 100%;
+  background-color: var(--xanhvl);
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+  padding: 20px 25px;
+  border-radius: 15px;
+  transition: .5s;
+}
+.task img{
+  position: absolute;
+  right: 20px;
+  top:40px;
+}
+.task:hover{
+  background-color: var(--xanhwe);
+}
+.task-bg{
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-x:95%;
+  background-position-y: -5px;
+  background-size: 25%;
+}
+.task-bg-0{
+  background-color: var(--work);
+  background-image: url('./images/icon-work.svg');
+  
+}
+.task-bg-1{
+  background-color: var(--play);
+  background-image: url('./images/icon-play.svg');
+}
+.task-bg-2{
+  background-color: var(--study);
+  background-image: url('./images/icon-study.svg');
+}
+.task-bg-3{
+  background-color: var(--exercise);
+  background-image: url('./images/icon-exercise.svg');
+}
+.task-bg-4{
+  background-color: var(--social);
+  background-image: url('./images/icon-social.svg');
+}
+.task-bg-5{
+  background-color: var(--self-care);
+  background-image: url('./images/icon-self-care.svg');
+}
+.content p:last-of-type{
+  color: var(--xanhxanh);
+}
+.content p:first-of-type{
+  
+  font-size: 35px;
+  margin: 0;
+  font-weight: 300;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media only screen and (min-width:1024px){
+  .big-container{
+    display: flex;
+    width:100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--xanhvllun);
+  }
+  .container{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+    width: 75%;
+  }
+  header{
+    display: block;
+    width: 20%;
+    height: 100%;
+    align-self: stretch;
+    margin-top: 15px;
+
+  }
+  header img{
+    width:80px;
+    height:80px;
+  }
+  .upper-sm-container{
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+    height: 70%;
+  }
+  .upper-sm-container p:last-of-type{
+    font-size: 30px;
+  }
+  .task-container{
+    width: 70%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .task-bg{
+    width: 30%;
+  }
+  .category{
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .category>*{
+    margin-top: 5px;
+  }
+  .task{
+    position: relative;
+    padding:  20px;
+    height: 170px;
+  }
+
+  .content{display: block;}
+  .content p:first-of-type{
+    font-size: 45px;
+  }
+  .content p:last-of-type{
+    font-size: 12px;
+  }
+}
